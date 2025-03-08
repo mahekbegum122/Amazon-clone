@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amazon</title>
+    <style> 
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar1{
+        height: 80px;
+        width: 100vw;
+        background-color:rgb(19,25,33);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+       
+    }
+    .search-a{
+        width: 83.2%;
+        padding: 10px 20px;
+        outline: none;
+        font-size: 15px;
+    }
+    .input-group{
+        width: 35%;
+        /* background-color: red; */
+       
+    }
+    .hover-border{
+        border: 1px solid rgb(19,25,33);
+        padding: 1px;
+        cursor: pointer;
+    }
+    .hover-border:hover{
+        border: 1px solid white;
+    }
+    .hvr1{
+        cursor: pointer;
+        border: 1px solid rgb(20,22,35);
+        padding: 3px;
+    }
+    .hvr1:hover{
+        border: 1px solid white;
+    }
+    .navbar2{
+        margin-top: 80px;
+        height: 70px;
+        width: 100vw;
+        padding: 10px;
+        background-color:rgb(34, 47, 62);
+    }
+    .hvr2{
+        cursor: pointer;
+        border: 1px solid rgb(34,47,62);
+        padding: 3px;
+        font-size: 14.5px;
+    }
+    .hvr2:hover{
+        border: 1px solid white;
+    }
+    .cart{
+      margin-right: 25px;
+    }
+    .fade-effect1{
+        /* width: 100vw; */
+        min-height: 100vh;
+        background: linear-gradient(to bottom,transparent,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff);
+        position: relative;
+        bottom: 300px;
+    }
+    .box{
+      width: 23vw;
+      height: 400px;
+      box-shadow: 0 0 60px rgba(141, 141, 141, 0.397);
+      background-color:white;
+      margin: 10px;
+    }
+    .row2{
+      width: 96vw;
+      height: 320px;
+      background-color: white;
+      margin: 18px auto;
+      box-shadow: 0 0 60px rgba(141, 141, 141, 0.397);
+    }
+    .main1{
+      width: 100%;
+      height: 80%;
+      /* background-color: orangered; */
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .main2{
+      min-width: 42%;
+      max-width: 43%;
+      height: 43.5%;
+      /* background-color: red; */
+      margin: 10px;
+    }
+    .ac{
+      font-size: 13px;
+    }
+    .row3{
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+      margin: 10px 10px;
+      gap: 30px;
+    }
+    .hello{
+      color: black;
+    }
+    .hd{
+      font-size: 25px;
+      /* margin-top: 40px; */
+      padding-top: 10px;
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- nav1 -->
+       <div class="navbar1 d-flex align-items-center justify-content-evenly gap-2 ">
+           <img src="amazon-logo.png" alt="" height="60%" class="mx-2 hover-border">
+           <div class="location text-white d-flex align-items-center justify-content-center hve1">
+            <i class="fa-solid fa-location-dot fs-2"></i>
+            <div class="location-g  hvr1">
+                <p class=" m-0 fs-8">Deliver to Hyderabad 500068</p>
+                <h class="m=0 fs-8">Update Location</h1>
+            </div>
+           </div>
+
+
+           <div class="input-group mb-1 ">
+            <button class="btn btn-secondary dropdown-toggle p-1" type="button" 
+            data-bs-toggle="dropdown" aria-expanded="false">All</button>
+   <ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="#">Action</a></li>
+     <li><a class="dropdown-item" href="#">Another action</a></li>
+     <li><a class="dropdown-item" href="#">Something else here</a></li>
+     <li><hr class="dropdown-divider"></li>
+     <li><a class="dropdown-item" href="#">Separated link</a></li>
+   </ul>
+            <input type="text" class="search-a" placeholder="Search Amazon.in" aria-label="Recipient's username" 
+            aria-describedby="basic-addon2 ">
+            <span class="input-group-text bg-warning" id="basic-addon2"><i class="fa-solid fa-magnifying-glass">
+            </i></span>
+          </div>
+
+          <div class="dropdown hvr1">
+            <button class="btn btn-transparent text-white fs-5 fw-bold mx=0 dropdown-toggle" type="button" 
+            data-bs-toggle="dropdown" aria-expanded="false">
+            
+                <img src="flag.png " width="30px">EN
+              
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+
+
+          <div class="dropdown hvr1">
+            <button class="btn btn-transparent d-flex align-items-center justify-content-center text-white  
+            fw-bold mx=0 dropdown-toggle" type="button" 
+            data-bs-toggle="dropdown" aria-expanded="false"><div>
+                <p class=m-0> Hello, Mahek</p>
+                <b class="m-0">
+                    Account & Lists
+                </b>
+            </div>
+              
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+          <div class="text-white fs-4.5 hvr1">
+              <p class="m-0 ">Returns</p>
+              <b class="m-0 ">
+                & Orders
+              </b>
+          </div>
+          <div class="text-white fs-5 d-flex cart hvr1">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>
+                Cart
+            </p>
+          </div>
+
+
+       </div>
+    <!-- nav2 -->
+    <div class="navbar2 d-flex justify-content-start align-items-center  gap-3">
+        <p class="hvr2 text-white mx-2">MX Player</p>
+        <p class="hvr2 text-white">Fresh Mea</p>
+        <p class="hvr2 text-white">Gift Cards</p>
+        <p class="hvr2 text-white">Sell</p>
+        <p class="hvr2 text-white">Buy Again</p>
+        <p class="hvr2 text-white">AmazonBasics</p>
+        <p class="hvr2 text-white">Gift Ideas</p>
+        <p class="hvr2 text-white">Health, Household & Personal Care</p>
+        <p class="hvr2 text-white">Browing History</p>
+        <p class="hvr2 text-white">Books </p>
+        <p class="hvr2 text-white">Today's Deals</p>
+        <p class="hvr2 text-white">grosery</p>
+        <p class="hvr2 text-white">Customer Service</p>
+    </div>
+    <div id="carouselExample" class="carousel slide"data-bs-ride="carousel">
+        <div class="carousel-inner"data-bs-interval="1000">
+          <div class="carousel-item active">
+            <img src="carousel1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item"data-bs-interval="1000">
+            <img src="banner3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item"data-bs-interval="1000">
+            <img src="banner4.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="fade-effect1   p-2 ">
+        <div class="d-flex justify-content-evenly">
+        <div class="box p-3 ">
+            <h4><b>Bestsellers|up to 75% off | </b> <b>Headphones</b></h4>
+            <div class="main1">
+              <div class="main2">
+                <img src="h-1.png" width="110%" height="110%" class="head">
+              </div>
+              <div class="main2">
+                <img src="h-2.png" width="100%" height="110%" class="head">
+              </div>
+              <div class="main2">
+                <img src="3.2.png" width="110%" height="100%" class="head">
+              </div>
+              <div class="main2">
+                <img src="h-4.png" width="100%" height="100%" class="head">
+              </div>
+            </div> 
+            <a href="" class="mx-2 fs-6 see">See More</a>    
+        </div>
+
+        <div class="box p-3 ">
+          <h4> <b>Appliances for your home | Up to 55%off</b></h4>
+          <div class="main1">
+            <div class="main2">
+              <img src="c-1.png" width="100%"  class="head">
+              <p class="ac">Air conditioners</p>
+            </div>
+            <div class="main2">
+              <img src="c-2.png" width="100%" height="55%" class="head">
+              <p class="ac">Refrigerators</p>
+            </div>
+            <div class="main2">
+              <img src="c-3.png" width="100%" height="55%" class="head">
+              <p class="ac">Microwaves</p>
+            </div>
+            <div class="main2">
+              <img src="c-4.png" width="100%"  class="head">
+              <p class="ac">Washing machines</p>
+            </div>
+          </div>  
+          <a href="" class="mx-2 fs-6 see">See More</a>
+      </div>
+        
+
+      <div class="box p-3 ">
+        <h4><b>
+          Continue shopping deals with lowest price</b></h4>
+        <div class="main1">
+          <div class="main2">
+            <img src="p-1.png" width="110%" height="110%" class="head">
+          </div>
+          <div class="main2">
+            <img src="p-2.png" width="100%" height="110%" class="head">
+          </div>
+          <div class="main2">
+            <img src="p-2.png" width="110%" height="100%" class="head">
+          </div>
+          <div class="main2">
+            <img src="p-1.png" width="100%" height="100%" class="head">
+          </div>
+        </div> 
+        <a href="" class="mx-2 fs-6 see">See More</a>    
+    </div>
+
+    <div class="box p-3 ">
+      <h4><b>Bestsellers|up to 75% off | </b> <b>Headphones</b></h4>
+      <div class="main1">
+        <div class="main2">
+          <img src="r-1.png" width="90%"  class="head">
+          <p class="ac">Cushion covers & more</p>
+        </div>
+        <div class="main2">
+          <img src="r-3.png" width="100%"  height="55%" class="head">
+          <p class="ac">Home Storage</p>
+        </div>
+        <div class="main2">
+          <img src="r-2" width="90%"  class="head">
+          <p class="ac"> Figurines, vases</p>
+        </div>
+        <div class="main2">
+          <img src="r-4.png" width="100%" height="50%" class="head">
+          <p class="ac">Lightning solid</p>
+        </div>
+      </div> 
+      <a href="" class="mx-2 fs-6 see">See More</a>    
+  </div>
+</div>
+        <div class="d-flex justify-content-evenly">
+        
+        <div class="box p-3 ">
+          <h4><b>Starting ₹199 | Amazon Brands & more</b></h4>
+          <div class="main1">
+            <div class="main2">
+              <img src="b-1.png" width="90%"  class="head">
+              <p class="ac">Starting ₹149 bedsheet</p>
+  
+            </div>
+            <div class="main2">
+              <img src="b-2.png" width="100%"  height="55%" class="head">
+              <p class="ac">curtains 40%off</p>
+            </div>
+            <div class="main2">
+              <img src="b-3.png" width="90%"  class="head">
+              <p class="ac"> Minimum 40% off</p>
+            </div>
+            <div class="main2">
+              <img src="b-4.png" width="100%" height="50%" class="head">
+              <p class="ac">Up to 60% off</p>
+            </div>
+          </div> 
+          <a href="" class="mx-2 fs-6 see">See More</a>    
+      </div>
+
+      <div class="box p-3 ">
+        <h4><b>Automotive essentials | </b> <b>Up to 60% off</b></h4>
+        <div class="main1">
+          <div class="main2">
+            <img src="a-1.png" width="90%"  class="head">
+            <p class="ac">Cushion covers & more</p>
+          </div>
+          <div class="main2">
+            <img src="a-2.png" width="100%"  height="55%" class="head">
+            <p class="ac">Home Storage</p>
+          </div>
+          <div class="main2">
+            <img src="a-3.png" width="90%"  class="head">
+            <p class="ac"> Figurines, vases</p>
+          </div>
+          <div class="main2">
+            <img src="a-4.png" width="100%" height="50%" class="head">
+            <p class="ac">Lightning solid</p>
+          </div>
+        </div> 
+        <a href="" class="mx-2 fs-6 see">See More</a>    
+    </div>
+
+    <div class="box p-3 ">
+      <h4><b>Bestsellers|up to 75% off | </b> <b>Headphones</b></h4>
+      <div class="main1">
+        <div class="main2">
+          <img src="r-1.png" width="90%"  class="head">
+          <p class="ac">Cushion covers & more</p>
+        </div>
+        <div class="main2">
+          <img src="r-3.png" width="100%"  height="55%" class="head">
+          <p class="ac">Home Storage</p>
+        </div>
+        <div class="main2">
+          <img src="r-2" width="90%"  class="head">
+          <p class="ac"> Figurines, vases</p>
+        </div>
+        <div class="main2">
+          <img src="r-4.png" width="100%" height="50%" class="head">
+          <p class="ac">Lightning solid</p>
+        </div>
+      </div> 
+      <a href="" class="mx-2 fs-6 see">See More</a>    
+  </div>
+
+  <div class="box p-3 ">
+    <h4><b>Starting ₹149 | Headphones
+    </b></h4>
+    <div class="main1">
+      <div class="main2">
+        <img src="bolt-1.png" width="90%"  class="head">
+        <p class="ac">Starting ₹249|Boats</p>
+      </div>
+      <div class="main2">
+        <img src="bolt-2.png" width="100%"  height="55%" class="head">
+        <p class="ac">Starting ₹349|Boult</p>
+      </div>
+      <div class="main2">
+        <img src="bol-3.png" width="100%"  class="head">
+        <p class="ac"> Starting ₹640 Noise</p>
+      </div>
+      <div class="main2">
+        <img src="bolt-4.png" width="100%" height="50%" class="head">
+        <p class="ac">Starting ₹149</p>
+      </div>
+    </div> 
+    <a href="" class="mx-2 fs-6 see">See More</a>    
+</div>
+        </div>
+         
+      <div class="row2">
+        <p class="hd"> <b>electric vehicles from stores near you</b></p>
+        <div class="row3 p-3">
+        
+          <div>
+            <img src="bike1.png">
+          </div>
+          <div>
+            <img src="bike2.png">
+          </div>
+          <div>
+            <img src="bike3.png">
+          </div>
+          <div>
+            <img src="bike4.png">
+          </div>
+          <div>
+            <img src="bike5.png">
+          </div>
+          <div>
+            <img src="bike2.png">
+          </div>
+          <div>
+            <img src="bike3.png">
+          </div>
+          <div>
+            <img src="bike4.png">
+          </div>
+  
+        </div>
+      </div>
+    
+      <div class="row2">
+        <p class="hd"> <b>Up to 75% off | A wide range of electronics & accessories from Small businesses</b></p>
+      <div class="row3 p-4">
+        <div>
+          <img src="pt1.png">
+        </div>
+        <div>
+          <img src="pt2.png">
+        </div>
+        <div>
+          <img src="pt3.png">
+        </div>
+        <div>
+          <img src="pt4.png">
+        </div>
+        <div>
+          <img src="pt5.png">
+        </div>
+        <div>
+          <img src="pt1.png">
+        </div>
+        <div>
+          <img src="pt3.png">
+        </div>
+        <div>
+          <img src="pt5.png">
+        </div>
+      </div>
+      </div>
+      
+      <div>
+        <div class="d-flex justify-content-evenly">
+        
+          <div class="box p-3 ">
+            <h4><b>Starting ₹199 | Amazon Brands & more</b></h4>
+            <div class="main1">
+              <div class="main2">
+                <img src="b-1.png" width="90%"  class="head">
+                <p class="ac">Starting ₹149 bedsheet</p>
+    
+              </div>
+              <div class="main2">
+                <img src="b-2.png" width="100%"  height="55%" class="head">
+                <p class="ac">curtains 40%off</p>
+              </div>
+              <div class="main2">
+                <img src="b-3.png" width="90%"  class="head">
+                <p class="ac"> Minimum 40% off</p>
+              </div>
+              <div class="main2">
+                <img src="b-4.png" width="100%" height="50%" class="head">
+                <p class="ac">Up to 60% off</p>
+              </div>
+            </div> 
+            <a href="" class="mx-2 fs-6 see">See More</a>    
+        </div>
+  
+        <!-- <div class="d-flex justify-content-evenly"> -->
+          <div class="box p-3 ">
+              <h4><b>Bestsellers|up to 75% off | </b> <b>Headphones</b></h4>
+              <div class="main1">
+                <div class="main2">
+                  <img src="h-1.png" width="110%" height="110%" class="head">
+                </div>
+                <div class="main2">
+                  <img src="h-2.png" width="100%" height="110%" class="head">
+                </div>
+                <div class="main2">
+                  <img src="3.2.png" width="110%" height="100%" class="head">
+                </div>
+                <div class="main2">
+                  <img src="h-4.png" width="100%" height="100%" class="head">
+                </div>
+              </div> 
+              <a href="" class="mx-2 fs-6 see">See More</a>    
+          </div>
+  
+  
+        <div class="box p-3 ">
+          <h4><b>Automotive essentials | </b> <b>Up to 60% off</b></h4>
+          <div class="main1">
+            <div class="main2">
+              <img src="a-1.png" width="90%"  class="head">
+              <p class="ac">Cushion covers & more</p>
+            </div>
+            <div class="main2">
+              <img src="a-2.png" width="100%"  height="55%" class="head">
+              <p class="ac">Home Storage</p>
+            </div>
+            <div class="main2">
+              <img src="a-3.png" width="90%"  class="head">
+              <p class="ac"> Figurines, vases</p>
+            </div>
+            <div class="main2">
+              <img src="a-4.png" width="100%" height="50%" class="head">
+              <p class="ac">Lightning solid</p>
+            </div>
+          </div> 
+          <a href="" class="mx-2 fs-6 see">See More</a>    
+      </div>
+      <div class="box p-3 ">
+        <h4><b>Starting ₹199 | Amazon Brands & more</b></h4>
+        <div class="main1">
+          <div class="main2">
+            <img src="b-1.png" width="90%"  class="head">
+            <p class="ac">Starting ₹149 bedsheet</p>
+  
+          </div>
+          <div class="main2">
+            <img src="b-2.png" width="100%"  height="55%" class="head">
+            <p class="ac">curtains 40%off</p>
+          </div>
+          <div class="main2">
+            <img src="b-3.png" width="90%"  class="head">
+            <p class="ac"> Minimum 40% off</p>
+          </div>
+          <div class="main2">
+            <img src="b-4.png" width="100%" height="50%" class="head">
+            <p class="ac">Up to 60% off</p>
+          </div>
+        </div> 
+        <a href="" class="mx-2 fs-6 see">See More</a>    
+    </div>
+      </div>
+
+      <div class="row2">
+        <p class="hd"> <b>Up to 80% off | Handcrafted products from artisans</b></p>
+        <div class="row3 p-3">
+        
+          <div>
+            <img src="div1.png">
+          </div>
+          <div>
+            <img src="div2.png">
+          </div>
+          <div>
+            <img src="div3.png">
+          </div>
+          <div>
+            <img src="div1.png">
+          </div>
+          <div>
+            <img src="div2.png">
+          </div>
+          <div>
+            <img src="div3.png">
+          </div>
+  
+        </div>
+      </div>
+     
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script>
+  </body>
+</html>
